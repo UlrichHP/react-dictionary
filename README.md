@@ -1,7 +1,7 @@
 ## freeCodeCamp
 
 This project is based on freeCodeCamp tutorial [Code a Dictionary with React and Material UI - Tutorial
-](https://www.youtube.com/watch?v=ToXna81iij0)
+](https://www.youtube.com/watch?v=ToXna81iij0) using the [Free Dictionary API](https://dictionaryapi.dev/) and [Material-UI](https://material-ui.com/).
 
 ## Getting Started with Create React App
 
