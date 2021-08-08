@@ -1,0 +1,11 @@
+.App {
+  background-color: #282c34;
+  color: #fff;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
