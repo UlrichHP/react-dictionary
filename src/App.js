@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import './App.css';
 import Definitions from './components/Definitions/Definitions';
+import Footer from "./components/Footer/Footer";
 import Header from './components/Header/Header';
 
 function App() {
@@ -13,17 +14,18 @@ function App() {
   const [theme, setTheme] = useState(false)
   const [word, setWord] = useState('')
 
-  const dictionaryApi = async() => {
-    try {
-      const data = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`)
-      setDatas(data.data)
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
   useEffect(() => {
-    dictionaryApi()
+    const dictionaryApi = async() => {
+      try {
+        const data = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`)
+        setDatas(data.data)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    if (word !== '' ) {
+      dictionaryApi()
+    }
   }, [word, category])
 
   const ThemeSwitch = withStyles({
@@ -69,6 +71,7 @@ function App() {
           theme={theme}
         />)}
       </Container>
+      <Footer />
     </div>
   );
 }

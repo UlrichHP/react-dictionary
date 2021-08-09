@@ -2,10 +2,11 @@ import React from 'react'
 import './Definitions.css'
 
 const Definitions = ({word, datas, category, theme}) => {
+  console.log(datas[0] && word && category === 'en')
   return (
     <div className="meanings">
       {/* audio---------------------------- */}
-      {datas[0] && word && category === "en" && (
+      {datas[0] && word && category === 'en' && (
         <audio
           style={{ backgroundColor: "#fff", borderRadius: 10 }}
           src={datas[0].phonetics[0] && datas[0].phonetics[0].audio}
@@ -16,7 +17,7 @@ const Definitions = ({word, datas, category, theme}) => {
       )}
       {/* audio---------------------------- */}
 
-      {word === "" ? (
+      {word === '' ? (
         <span className="subTitle">Commencez par écrire un mot</span>
       ) : (
         datas.map((data) =>
@@ -24,21 +25,22 @@ const Definitions = ({word, datas, category, theme}) => {
             item.definitions.map((def) => (
               <div
                 className="singleMean"
+                key={def.example}
                 style={{
                   backgroundColor: theme ? '#3b5360' : '#fff',
                   color: theme ? '#fff' : '#000',
                 }}
               >
-                <b>{def.definition}</b>
+                <strong>{def.definition}</strong>
                 <hr style={{ backgroundColor: "black", width: "100%" }} />
                 {def.example && (
                   <span>
-                    <b>Example :</b> {def.example}
+                    <strong>Example :</strong> {def.example}
                   </span>
                 )}
                 {def.synonyms && (
                   <span>
-                    <b>Synonyms :</b> {def.synonyms.map((s) => `${s}, `)}
+                    <strong>Synonyms :</strong> {def.synonyms.map((s) => `${s}, `)}
                   </span>
                 )}
               </div>
