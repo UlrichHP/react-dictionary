@@ -36,12 +36,12 @@ const Definitions = ({word, datas, category, theme}) => {
                 <hr style={{ backgroundColor: "black", width: "100%" }} />
                 {def.example && (
                   <span>
-                    <strong>Example :</strong> {def.example}
+                    <strong>Exemple :</strong> {def.example}
                   </span>
                 )}
                 {def.synonyms && (
                   <span>
-                    <strong>Synonyms :</strong> {def.synonyms.map((s) => `${s}, `)}
+                    <strong>Synonymes :</strong> {def.synonyms.map((s) => `${s}, `)}
                   </span>
                 )}
               </div>
