@@ -3,13 +3,13 @@ import React from 'react'
 import './Header.css'
 import categories from '../../data/categories'
 
-const Header = ({category, setCategory, word, setWord}) => {
+const Header = ({category, setCategory, word, setWord, theme}) => {
   const darkTheme = createTheme({
     palette: {
       primary: {
-        main: '#fff'
+        main: theme ? '#000' : '#fff'
       },
-      type: 'dark'
+      type: theme ? 'light' : 'dark'
     }
   })
 
@@ -20,7 +20,7 @@ const Header = ({category, setCategory, word, setWord}) => {
 
   return (
     <div className="header">
-      <span className="title">{word ? word : 'Dictionary'}</span>
+      <span className="title">{word ? word : 'Dictionnaire'}</span>
       <div className="inputs">
         <ThemeProvider theme={darkTheme}>
           <TextField
@@ -32,7 +32,7 @@ const Header = ({category, setCategory, word, setWord}) => {
           <TextField
             select
             className="select"
-            label="Language"
+            label="Langue"
             value={category}
             onChange={(e) => handleChange(e)}
           >

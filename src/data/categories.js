@@ -1,16 +1,16 @@
 const categories = [
-  { value: "English", label: "en" },
+  { value: "Allemand", label: "de" },
+  { value: "Anglais", label: "en" },
+  { value: "Arabe", label: "ar" },
+  { value: "Coréen", label: "ko" },
+  { value: "Espagnol", label: "es" },
+  { value: "Français", label: "fr" },
   { value: "Hindi", label: "hi" },
-  { value: "Spanish", label: "es" },
-  { value: "French", label: "fr" },
-  { value: "Japanese", label: "ja" },
-  { value: "Russian", label: "ru" },
-  { value: "German", label: "de" },
-  { value: "Italian", label: "it" },
-  { value: "Korean", label: "ko" },
-  { value: "Brazilian Portuguese", label: "pt-BR" },
-  { value: "Arabic", label: "ar" },
-  { value: "Turkish", label: "tr" },
+  { value: "Italien", label: "it" },
+  { value: "Japonais", label: "ja" },
+  { value: "Portuguais Brésilien", label: "pt-BR" },
+  { value: "Russe", label: "ru" },
+  { value: "Turc", label: "tr" },
 ]
 
 export default categories

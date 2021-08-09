@@ -1,11 +1,20 @@
-.App {
-  background-color: #282c34;
-  color: #fff;
-  height: 100vh;
-}
-
 .container {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  justify-content: space-evenly;
+}
+
+.switch {
+  padding-top: 10px;
+  position: absolute;
+  right: 15px;
+  text-align: right;
+  top: 0;
+}
+
+@media (max-width: 900px) {
+  .switch {
+    position: initial;
+  }
 }
