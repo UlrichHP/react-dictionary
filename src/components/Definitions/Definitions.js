@@ -2,7 +2,8 @@ import React from 'react'
 import './Definitions.css'
 
 const Definitions = ({word, datas, category, theme}) => {
-  console.log(datas[0] && word && category === 'en')
+  let i = 0
+
   return (
     <div className="meanings">
       {/* audio---------------------------- */}
@@ -25,7 +26,7 @@ const Definitions = ({word, datas, category, theme}) => {
             item.definitions.map((def) => (
               <div
                 className="singleMean"
-                key={def.example}
+                key={i++}
                 style={{
                   backgroundColor: theme ? '#3b5360' : '#fff',
                   color: theme ? '#fff' : '#000',
